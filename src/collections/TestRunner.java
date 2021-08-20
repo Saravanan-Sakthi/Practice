@@ -30,6 +30,10 @@ public class TestRunner {
         taxiSet.add(d);
         taxiSet.add(e);
         taxiSet.add(f);
+        Taxi t= new Taxi();
+        t.setAvailableTime(13);
+        t.setEarning(0);
         System.out.print(taxiSet);
+        System.out.println(taxiSet.floor(t));
     }
 }

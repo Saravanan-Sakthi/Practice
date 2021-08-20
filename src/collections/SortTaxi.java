@@ -6,7 +6,7 @@ public class SortTaxi implements Comparator<Taxi> {
     @Override
     public int compare(Taxi taxi, Taxi t1) {
         if(taxi.getAvailableTime() == t1.getAvailableTime()){
-            return (int) (taxi.getEarning()-t1.getEarning());
+            return (int) (t1.getEarning()-taxi.getEarning());
         }
         else {
             return taxi.getAvailableTime()-t1.getAvailableTime();
