@@ -10,6 +10,11 @@ import java.util.regex.Pattern;
 
 public class Abc {
     public static void main(String [] abc){
+
+        String a= "hari";
+        String b = "hari";
+        if(a==b) System.out.println("equal");
+        else System.out.println("not equal");
         /*Pattern pattern= new com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern() {
             @Override
             public String toString() {
@@ -45,7 +50,7 @@ public class Abc {
         System.out.println(a);
         char b= (char) (a-1);
         System.out.println(b);*/
-        try {
+       /* try {
         Class ref =Class.forName("collections.Taxi");
         Method[] methos = ref.getMethods();
         Class [] params =methos[1].getParameterTypes();
@@ -54,7 +59,7 @@ public class Abc {
         }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }
+        }*/
     }
     public static void modify1(List<String>list2){
         list2.add("Azhagu");

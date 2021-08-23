@@ -5,12 +5,12 @@ public class ClassToTest {
     public String s="Saravanan";
     protected int n=25;
     float f= 23.03F;
-    //private String secret="hey penne...";
+    private String secret="hey penne...";
 
     ClassToTest(int n){
         System.out.println("Inside package protected constructor");
     }
-    public ClassToTest(){
+    public ClassToTest(float b){
         System.out.println("Inside public constructor");
     }
     protected ClassToTest(String s){
