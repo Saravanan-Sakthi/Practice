@@ -5,17 +5,6 @@ import java.util.List;
 
 public class Producer implements Runnable{
     static List<Object> list = new ArrayList<>();
-    public static void main(String[] args) {
-        Producer obj = new Producer();
-        Thread producer= new Thread(obj);
-        producer.setName("Producer thread");
-        producer.start();
-        Consumer obj1= new Consumer();
-        Thread consumer= new Thread(obj1);
-        consumer.setName("Consumer");
-        consumer.start();
-    }
-
     @Override
     public void run() {
         loadList();
@@ -24,6 +13,15 @@ public class Producer implements Runnable{
     private void loadList() {
         while(true) {
             list.add(new Object());
+            if(list.size()==50){
+                list.clear();
+                Thread.currentThread().setPriority(1);
+                try {
+                    Thread.currentThread().sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
             System.out.println(Thread.currentThread().getName()+" loaded");
         }
     }
