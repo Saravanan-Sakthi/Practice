@@ -20,7 +20,7 @@ public class SortingDriver {
         }
         System.out.println(Arrays.toString(array));
         System.out.println();
-        array = new MergeSort().sort(array);
+        array = new InsertionSort().sort(array);
         System.out.println();
         System.out.println(Arrays.toString(array));
     }
