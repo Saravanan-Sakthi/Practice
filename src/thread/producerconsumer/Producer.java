@@ -1,28 +1,28 @@
 package thread.producerconsumer;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Producer implements Runnable{
-    static List<Object> list = new ArrayList<>();
+
     @Override
     public void run() {
         loadList();
     }
 
     private void loadList() {
-        while(true) {
-            list.add(new Object());
-            if(list.size()==50){
-                list.clear();
-                Thread.currentThread().setPriority(1);
-                try {
-                    Thread.currentThread().sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        synchronized (this) {
+            while (true) {
+                while (Inventory.list.size() == 10) {
+
+                    try {
+                        this.wait(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
                 }
+                Inventory.list.add(new Integer(500));
+                System.out.println(Thread.currentThread().getName() + " thread loaded list size = "+Inventory.list.size());
             }
-            System.out.println(Thread.currentThread().getName()+" loaded");
         }
     }
 }

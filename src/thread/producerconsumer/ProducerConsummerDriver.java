@@ -2,12 +2,12 @@ package thread.producerconsumer;
 
 public class ProducerConsummerDriver {
     public static void main(String[] args) {
-        Consumer obj1= new Consumer();
-        Thread consumer= new Thread(obj1);
+        Consumer objc = new Consumer();
+        Thread consumer= new Thread(objc);
         consumer.setName("Consumer");
         consumer.start();
-        Producer obj = new Producer();
-        Thread producer= new Thread(obj);
+        Producer objp = new Producer();
+        Thread producer= new Thread(objp);
         producer.setName("Producer thread");
         producer.start();
     }

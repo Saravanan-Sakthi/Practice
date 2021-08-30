@@ -1,18 +1,26 @@
 package thread.producerconsumer;
 
-import java.util.List;
-
 public class Consumer implements Runnable{
-    static List<Object> list = Producer.list;
     @Override
     public void run() {
         unloadList();
     }
 
     private void unloadList() {
-        while (true){
-            list.remove(0);
-            System.out.println(Thread.currentThread().getName()+" Unloaded");
+        synchronized (this) {
+            while (true) {
+                while (Inventory.list.size() == 0) {
+
+                    try {
+                        this.wait(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                Inventory.list.remove(0);
+                System.out.println(Thread.currentThread().getName()+" unloaded current list size = "+Inventory.list.size());
+            }
         }
     }
 }
