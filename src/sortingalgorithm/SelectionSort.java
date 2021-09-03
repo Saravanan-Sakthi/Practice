@@ -1,5 +1,7 @@
 package sortingalgorithm;
 
+import java.util.HashMap;
+
 public class SelectionSort {
     public int[] sort(int[] array){
         int length = array.length;
