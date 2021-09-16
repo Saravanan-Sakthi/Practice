@@ -2,7 +2,7 @@ package sortingalgorithm;
 
 import java.util.Arrays;
 
-public class MergeSort {
+public class MergeSort {    // time complexity : n log n
     public int [] sort(int [] array){
         mergeSort(array);
         return array;

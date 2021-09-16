@@ -2,7 +2,7 @@ package sortingalgorithm;
 
 import java.util.Arrays;
 
-public class QuickSort {
+public class QuickSort {  // time complexity : n log n            worst case : n2
     public int[] sort(int [] array){
         quickSort(array, 0, array.length-1);
         return array;
@@ -22,19 +22,19 @@ public class QuickSort {
         for (int j=low; j<= high ; j++){
             if(array[j]<pivot){
                 i++;
-                if(i !=j){
+                if(i !=j){  // swap
                     array[i] = array[i] + array[j];
                     array[j] = array[i] - array[j];
                     array[i] = array[i] - array[j];
-//                    System.out.println(Arrays.toString(array));
                 }
             }
         }
-        if(i+1 != high) {
+        if(i+1 != high) {  //swap
             array[i + 1] = array[i + 1] + array[high];
             array[high] = array[i + 1] - array[high];
             array[i + 1] = array[i + 1] - array[high];
         }
+        System.out.println(Arrays.toString(array));
         return i+1;
     }
 }

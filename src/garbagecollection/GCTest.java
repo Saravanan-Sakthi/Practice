@@ -28,7 +28,6 @@ public class GCTest {
                     a.add(new GCTest());
                     //Thread.currentThread().sleep(1);
 
-                    System.out.print("s");
                 }
             }
             else if(option==2){

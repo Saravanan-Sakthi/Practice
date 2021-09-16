@@ -2,7 +2,7 @@ package sortingalgorithm;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class BubbleSort { // time complexity : n2       best case: n
     public int [] sort(int [] array){
         int length = array.length;
         boolean swapped = true;

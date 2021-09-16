@@ -2,7 +2,7 @@ package sortingalgorithm;
 
 import java.util.HashMap;
 
-public class SelectionSort {
+public class SelectionSort {  // time complexity n2
     public int[] sort(int[] array){
         int length = array.length;
         for (int i=0 ; i<length ; i++){

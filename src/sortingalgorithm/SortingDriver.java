@@ -17,10 +17,10 @@ public class SortingDriver {
         System.out.print("Enter the number of elements: ");
         int n = scan.nextInt();
         int [] array = new int[n];
-        System.out.print("Enter the elements : ");
+       /* System.out.print("Enter the elements : ");
         for (int i=0 ; i<n ; i++){
             array[i] = scan.nextInt();
-        }
+        }*/
         Random rand= new Random();
         for (int i=0 ; i<n ; i++){
             array[i]=rand.nextInt(100);
