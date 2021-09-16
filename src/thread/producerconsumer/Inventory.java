@@ -6,7 +6,7 @@ import java.util.List;
 public class Inventory {
     public static List <Integer> list = new ArrayList<>();
 
-    public static synchronized void loadList() {
+    public  synchronized void loadList() {
                 while (Inventory.list.size() <= 10) {
 //
 //                    try {
@@ -19,7 +19,7 @@ public class Inventory {
                 Inventory.list.add(new Integer(500));
                 System.out.println(Thread.currentThread().getName() + " thread loaded list size = "+Inventory.list.size());
             }
-    public static synchronized void unloadList() {
+    public  synchronized void unloadList() {
                 while (Inventory.list.size() >= 0) {
                     try {
                         this.wait(1000);

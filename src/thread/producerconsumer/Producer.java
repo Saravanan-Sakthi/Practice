@@ -5,7 +5,7 @@ public class Producer implements Runnable{
 
     @Override
     public void run() {
-        Inventory.loadList();
+        new Inventory().loadList();
     }
 
 
