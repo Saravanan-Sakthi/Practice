@@ -1,5 +1,8 @@
 interface Drawable{
     public int draw(int n);
+    public static void method(){
+        System.out.println("method");
+    }
 }
 public class PracticeTest {
 

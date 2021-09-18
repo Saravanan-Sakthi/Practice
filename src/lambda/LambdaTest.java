@@ -37,6 +37,7 @@ public class LambdaTest {
         numbers.forEach(System.out::println);
 
 
+        //Function composition or pipeline
         System.out.println(
                 numbers.stream()
                         .filter(e -> e % 2 == 0)

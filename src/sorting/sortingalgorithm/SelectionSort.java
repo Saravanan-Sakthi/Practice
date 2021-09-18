@@ -1,6 +1,4 @@
-package sortingalgorithm;
-
-import java.util.HashMap;
+package sorting.sortingalgorithm;
 
 public class SelectionSort {  // time complexity n2
     public int[] sort(int[] array){

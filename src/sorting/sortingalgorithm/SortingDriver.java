@@ -1,7 +1,6 @@
-package sortingalgorithm;
+package sorting.sortingalgorithm;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
