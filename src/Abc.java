@@ -5,6 +5,7 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -15,6 +16,9 @@ public class Abc {
         String b = "hari";
         if(a==b) System.out.println("equal");
         else System.out.println("not equal");
+
+        String [] testArray = "".split(",");
+        System.out.println(Arrays.asList(testArray));
         /*Pattern pattern= new com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern() {
             @Override
             public String toString() {
