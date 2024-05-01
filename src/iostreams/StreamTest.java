@@ -1,4 +1,4 @@
-package streams;
+package iostreams;
 
 import java.io.*;
 import java.util.Arrays;
@@ -9,7 +9,8 @@ public class StreamTest {
         //bufferedWriterTest();
         //scannerTest();
         //consoleTest();
-        dataStreamsTest();
+        //dataStreamsTest();
+        bufferedReaderCloseTest();
     }
     private static void bufferedWriterTest() throws IOException {
         BufferedWriter writer = null;
@@ -102,5 +103,17 @@ public class StreamTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void bufferedReaderCloseTest() {
+        try {
+            FileReader reader = new FileReader("/Users/saravanan-12380/saro/cdpcodenotes/usecase4.txt");
+            BufferedReader br = new BufferedReader(reader);
+            br.close();
+            System.out.println(reader.read());
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
     }
 }

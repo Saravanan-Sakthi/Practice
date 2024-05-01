@@ -13,12 +13,19 @@ public class InterruptDriver {
         InterruptibleClass thread2 = new InterruptibleClass();
         thread2.setName("Thread 2");
         thread2.setLoop(true);
-        thread1.start();
-        thread2.start();
-        Thread.sleep(5000);
-        thread1.interrupt();
-        System.out.println("Enter stop to stop thread 1 loop");
-        boolean thread1Loop = scan.nextBoolean();
-        thread1.setLoop(thread1Loop);
+        Thread thread1Thread = new Thread(thread1);
+        thread1Thread.start();
+        //new Thread(thread2).start();
+        //Thread.sleep(5000);
+        thread1Thread.interrupt();
+        System.out.println("enter anything to stop Thread 1");
+        scan.nextLine();
+        Trigger.setTrigger(thread1.getName(), false);
+        /*System.out.println("enter anything to stop Thread 2");
+        scan.nextLine();
+        Trigger.setTrigger(thread2.getName(), false);*/
+
+        String a = "Pradeep";
+        String b = new String("Pradeep");
     }
 }
