@@ -10,7 +10,16 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/saro/ZIDE/deployment/ROOT/AdventNet/Sas/tomcat/webapps/ROOT/WEB-INF/lib/json.jar!/" />
+          <root url="jar://$USER_HOME$/saro/java/jars/snakeyaml-2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/saro/java/jars/json.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

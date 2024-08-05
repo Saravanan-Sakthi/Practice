@@ -1,0 +1,22 @@
+default_base_domain : &default_base_domain https://www.zohoapis.com
+eu_base_domain : &eu_base_domain https://www.zohoapis.eu
+
+us :
+  base_domain : *default_base_domain
+  global : true
+eu :
+  base_domain : *eu_base_domain
+  global : true
+jp :
+  base_domain : *default_base_domain
+  global : true
+trainercentral :
+  base_domain : *default_base_domain
+zohopos :
+  base_domain : *default_base_domain
+zillum :
+  base_domain : *default_base_domain
+vani :
+  base_domain : *default_base_domain
+nila :
+  base_domain : *default_base_domain
