@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Inventory {
     public static List <Integer> list = new ArrayList<>();
+    public static List <String> workers = new ArrayList<>();
 
     public  synchronized void loadList() {
                 while (Inventory.list.size() <= 10) {
