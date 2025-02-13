@@ -13,6 +13,8 @@ public class MultiThreadingTest {
         for (int i = 0 ; i < numberOfThreads ; i++) {
             Thread thread = new Thread(new WorkerThread(latch,("Thread "+i)));
             thread.start();
+            WorkerThread obj = new WorkerThread(latch, "test");
+            obj.run();
         }
         try {
             latch.await();

@@ -2,7 +2,11 @@ package inheritance;
 
 public class TestRunner {
     public static void main(String[] args) throws InterruptedException {
-        Parent muObj = new Child();
-        ((Child)muObj).testMethod1();
+//        Object muObj = new Parent(1);
+//        Child child = (Child) muObj;
+//        System.out.println(child);
+
+        System.out.println(Child.name);
+
     }
 }

@@ -4,6 +4,10 @@ import inheritance.Parent;
 
 public class Child extends Parent {
 
+    static {
+        System.out.println("Child static");
+    }
+
     public Child() {
         super(1);
         //System.out.println("child");
