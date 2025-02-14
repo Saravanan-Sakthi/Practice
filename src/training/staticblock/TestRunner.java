@@ -1,4 +1,4 @@
-package training.classloading;
+package training.staticblock;
 
 public class TestRunner {
     public static void main(String[] args) {

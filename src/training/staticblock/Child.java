@@ -1,4 +1,4 @@
-package training.classloading;
+package training.staticblock;
 
 public class Child extends Parent{
 
