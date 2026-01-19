@@ -5,14 +5,9 @@ import java.util.*;
 
 public class Abc {
 
-    private static Map<String, Long> hashMap = new HashMap<>();
     public static void main(String [] inputs){
-        hashMap.put("Hello", null);
-        System.out.println(getValue());
-        //System.out.println("hello");
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
     }
 
-    private static long getValue() {
-        return hashMap.get("Hello");
-    }
 }

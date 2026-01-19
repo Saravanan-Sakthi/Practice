@@ -23,8 +23,6 @@ class Test {
         return instance;
     }
     public static void display() {
-
-
         System.out.println("Key = dummy1, Value = "+map.get("dummy1"));
     }
 }
